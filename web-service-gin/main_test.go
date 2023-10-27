@@ -41,8 +41,8 @@ func TestIntMinTableDriven(t testing.T) {
 
 	for _, tt := range tests {
 		testname := fmt.Sprintf("%d,%d", tt.Init_password, tt.want)
-		t.Run(testname, func(ttesting.T) {
-			ans := password(tt.Init_password)
+		t.Run(testname, func(t *testing.T) {
+			ans := password(tt.init_password)
 			if ans != tt.want {
 				t.Errorf("got %d, want %d", ans, tt.want)
 			}
